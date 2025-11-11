@@ -1,0 +1,42 @@
+// 5年级词汇数据
+const grade5Vocabulary = [
+  // 身体健康
+  { chinese: "医院", english: "hospital", englishDistractors: ["clinic", "pharmacy", "dentist"], chineseDistractors: ["诊所", "药店", "牙医"] },
+  { chinese: "医生", english: "doctor", englishDistractors: ["nurse", "patient", "surgeon"], chineseDistractors: ["护士", "病人", "外科医生"] },
+  { chinese: "护士", english: "nurse", englishDistractors: ["doctor", "patient", "medical"], chineseDistractors: ["医生", "病人", "医疗"] },
+  { chinese: "药", english: "medicine", englishDistractors: ["drug", "pill", "treatment"], chineseDistractors: ["药物", "药片", "治疗"] },
+  { chinese: "疼痛", english: "pain", englishDistractors: ["hurt", "ache", "sore"], chineseDistractors: ["受伤", "疼痛", "酸痛"] },
+  
+  // 情感与性格
+  { chinese: "高兴", english: "happy", englishDistractors: ["sad", "angry", "excited"], chineseDistractors: ["悲伤", "生气", "兴奋"] },
+  { chinese: "悲伤", english: "sad", englishDistractors: ["happy", "upset", "depressed"], chineseDistractors: ["高兴", "沮丧", "抑郁"] },
+  { chinese: "生气", english: "angry", englishDistractors: ["mad", "furious", "upset"], chineseDistractors: ["疯狂", "愤怒", "沮丧"] },
+  { chinese: "害怕", english: "afraid", englishDistractors: ["scared", "frightened", "terrified"], chineseDistractors: ["害怕", "恐惧", "惊恐"] },
+  { chinese: "兴奋", english: "excited", englishDistractors: ["thrilled", "enthusiastic", "eager"], chineseDistractors: ["激动", "热情", "渴望"] },
+  
+  // 天气与季节
+  { chinese: "晴朗", english: "sunny", englishDistractors: ["cloudy", "rainy", "windy"], chineseDistractors: ["多云", "下雨", "刮风"] },
+  { chinese: "多云", english: "cloudy", englishDistractors: ["sunny", "rainy", "foggy"], chineseDistractors: ["晴朗", "下雨", "有雾"] },
+  { chinese: "下雨", english: "rainy", englishDistractors: ["sunny", "cloudy", "stormy"], chineseDistractors: ["晴朗", "多云", "暴风雨"] },
+  { chinese: "刮风", english: "windy", englishDistractors: ["calm", "breezy", "stormy"], chineseDistractors: ["平静", "微风", "暴风雨"] },
+  
+  // 食物与饮料
+  { chinese: "蔬菜", english: "vegetable", englishDistractors: ["fruit", "meat", "snack"], chineseDistractors: ["水果", "肉", "零食"] },
+  { chinese: "水果", english: "fruit", englishDistractors: ["vegetable", "snack", "dessert"], chineseDistractors: ["蔬菜", "零食", "甜点"] },
+  { chinese: "肉类", english: "meat", englishDistractors: ["vegetable", "fruit", "seafood"], chineseDistractors: ["蔬菜", "水果", "海鲜"] },
+  { chinese: "米饭", english: "rice", englishDistractors: ["noodle", "bread", "pasta"], chineseDistractors: ["面条", "面包", "意大利面"] },
+  { chinese: "面条", english: "noodle", englishDistractors: ["rice", "bread", "spaghetti"], chineseDistractors: ["米饭", "面包", "意大利面条"] },
+  
+  // 购物
+  { chinese: "价格", english: "price", englishDistractors: ["cost", "value", "expense"], chineseDistractors: ["成本", "价值", "费用"] },
+  { chinese: "便宜", english: "cheap", englishDistractors: ["expensive", "affordable", "inexpensive"], chineseDistractors: ["昂贵", "负担得起", "便宜"] },
+  { chinese: "昂贵", english: "expensive", englishDistractors: ["cheap", "costly", "pricey"], chineseDistractors: ["便宜", "昂贵的", "价格高的"] },
+  { chinese: "购买", english: "buy", englishDistractors: ["purchase", "sell", "shop"], chineseDistractors: ["购买", "出售", "购物"] },
+  
+  // 时间与频率
+  { chinese: "经常", english: "often", englishDistractors: ["always", "sometimes", "rarely"], chineseDistractors: ["总是", "有时", "很少"] },
+  { chinese: "总是", english: "always", englishDistractors: ["never", "sometimes", "usually"], chineseDistractors: ["从不", "有时", "通常"] },
+  { chinese: "从不", english: "never", englishDistractors: ["always", "sometimes", "rarely"], chineseDistractors: ["总是", "有时", "很少"] },
+];
+
+export default grade5Vocabulary;

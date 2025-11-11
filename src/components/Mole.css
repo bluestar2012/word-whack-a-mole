@@ -1,0 +1,298 @@
+.mole {
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: bottom 0.3s ease-out;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mole.visible {
+  bottom: -30px;
+  animation: popUp 0.5s ease-out;
+}
+
+@keyframes popUp {
+  0% { bottom: -200px; }
+  60% { bottom: 10px; }
+  80% { bottom: -20px; }
+  100% { bottom: -30px; }
+}
+
+.mole:hover {
+  transform: translateX(-50%) scale(1.05);
+}
+
+.mole:active {
+  transform: translateX(-50%) scale(0.95);
+}
+
+/* 禁用触摸设备的hover效果 */
+@media (hover: none) and (pointer: coarse) {
+  .mole:hover {
+    transform: translateX(-50%);
+  }
+}
+
+/* 单词牌子 - 在地鼠头顶 */
+.word-sign {
+  background: linear-gradient(135deg, #FFF8DC 0%, #FFFACD 50%, #FFF8DC 100%);
+  color: #333;
+  padding: clamp(10px, 2.5vw, 14px) clamp(20px, 4vw, 28px);
+  border-radius: 12px;
+  font-size: clamp(18px, 4vw, 22px);
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 
+    0 6px 16px rgba(0, 0, 0, 0.25),
+    inset 0 2px 4px rgba(255, 255, 255, 0.8),
+    0 0 0 3px #DAA520;
+  border: 3px solid #B8860B;
+  min-width: clamp(90px, 20vw, 130px);
+  white-space: nowrap;
+  margin-bottom: clamp(-6px, -1vw, -4px); /* 负边距让卡片压在地鼠头上 */
+  z-index: 100;
+  animation: signFloat 2s ease-in-out infinite;
+  background-image: 
+    linear-gradient(135deg, #FFF8DC 0%, #FFFACD 50%, #FFF8DC 100%),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 10px,
+      rgba(218, 165, 32, 0.05) 10px,
+      rgba(218, 165, 32, 0.05) 20px
+    );
+  background-blend-mode: normal;
+}
+
+@keyframes signFloat {
+  0%, 100% { 
+    transform: translateY(0) scale(1); 
+  }
+  50% { 
+    transform: translateY(-8px) scale(1.02); 
+  }
+}
+
+.mole:hover .word-sign {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 
+    0 10px 25px rgba(255, 215, 0, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.9),
+    0 0 0 3px #FFD700,
+    0 0 20px rgba(255, 215, 0, 0.3);
+  animation: signShine 0.6s ease-in-out infinite;
+}
+
+/* 触摸设备：禁用hover，使用active */
+@media (hover: none) and (pointer: coarse) {
+  .mole:hover .word-sign {
+    background: linear-gradient(135deg, #FFF8DC 0%, #FFFACD 50%, #FFF8DC 100%);
+    transform: none;
+    box-shadow: 
+      0 6px 16px rgba(0, 0, 0, 0.25),
+      inset 0 2px 4px rgba(255, 255, 255, 0.8),
+      0 0 0 3px #DAA520;
+    animation: signFloat 2s ease-in-out infinite;
+  }
+  
+  .mole:active .word-sign {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+    transform: scale(1.05);
+    box-shadow: 
+      0 8px 20px rgba(255, 215, 0, 0.4),
+      inset 0 2px 4px rgba(255, 255, 255, 0.9),
+      0 0 0 3px #FFD700;
+    animation: none;
+  }
+}
+
+/* 点击后保持高亮效果 */
+.mole.clicked .word-sign {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+  transform: scale(1.05);
+  box-shadow: 
+    0 8px 20px rgba(255, 215, 0, 0.5),
+    inset 0 2px 4px rgba(255, 255, 255, 0.9),
+    0 0 0 3px #FFD700,
+    0 0 15px rgba(255, 215, 0, 0.4);
+  animation: clickedGlow 1s ease-in-out infinite;
+}
+
+@keyframes clickedGlow {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.1); }
+}
+
+/* 点击后禁用hover效果 */
+.mole.clicked:hover .word-sign {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+  transform: scale(1.05);
+  box-shadow: 
+    0 8px 20px rgba(255, 215, 0, 0.5),
+    inset 0 2px 4px rgba(255, 255, 255, 0.9),
+    0 0 0 3px #FFD700,
+    0 0 15px rgba(255, 215, 0, 0.4);
+  animation: clickedGlow 1s ease-in-out infinite;
+}
+
+.mole.clicked {
+  pointer-events: none;
+}
+
+/* 触摸设备：点击后保持高亮 */
+@media (hover: none) and (pointer: coarse) {
+  .mole.clicked:active .word-sign {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+    transform: scale(1.05);
+    box-shadow: 
+      0 8px 20px rgba(255, 215, 0, 0.5),
+      inset 0 2px 4px rgba(255, 255, 255, 0.9),
+      0 0 0 3px #FFD700,
+      0 0 15px rgba(255, 215, 0, 0.4);
+    animation: clickedGlow 1s ease-in-out infinite;
+  }
+}
+
+@keyframes signShine {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.15); }
+}
+
+/* 地鼠身体 */
+.mole-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 50;
+}
+
+.mole-head {
+  width: clamp(70px, 14vw, 110px);
+  height: clamp(84px, 16vw, 132px);
+  position: relative;
+  z-index: 2;
+}
+
+.mole-face {
+  width: clamp(70px, 14vw, 110px);
+  height: clamp(70px, 14vw, 110px);
+  background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #8B4513 100%);
+  border-radius: 50% 50% 45% 45%;
+  position: relative;
+  box-shadow: 
+    inset -5px -5px 10px rgba(0, 0, 0, 0.3),
+    0 5px 15px rgba(0, 0, 0, 0.4);
+  border: 3px solid #654321;
+}
+
+/* 耳朵 */
+.mole-face::before,
+.mole-face::after {
+  content: '';
+  position: absolute;
+  width: clamp(18px, 4vw, 30px);
+  height: clamp(21px, 5vw, 35px);
+  background: linear-gradient(135deg, #A0522D 0%, #8B4513 100%);
+  border-radius: 50%;
+  top: 10px;
+  box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.3);
+  border: 2px solid #654321;
+}
+
+.mole-face::before {
+  left: -15px;
+  transform: rotate(-20deg);
+}
+
+.mole-face::after {
+  right: -15px;
+  transform: rotate(20deg);
+}
+
+/* 眼睛 */
+.mole-eyes {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 clamp(15px, 3.5vw, 25px);
+  margin-top: clamp(20px, 4.5vw, 35px);
+}
+
+.eye {
+  width: clamp(12px, 3vw, 20px);
+  height: clamp(15px, 4vw, 25px);
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: 2px solid #333;
+}
+
+.eye::after {
+  content: '';
+  position: absolute;
+  width: clamp(6px, 1.5vw, 10px);
+  height: clamp(7px, 2vw, 12px);
+  background: #000;
+  border-radius: 50%;
+  top: clamp(4px, 1vw, 6px);
+  left: clamp(3px, 0.8vw, 5px);
+  animation: blink 3s infinite;
+}
+
+@keyframes blink {
+  0%, 96%, 100% { transform: scaleY(1); }
+  98% { transform: scaleY(0.1); }
+}
+
+/* 鼻子 */
+.mole-nose {
+  width: clamp(10px, 2.5vw, 16px);
+  height: clamp(8px, 2vw, 13px);
+  background: #654321;
+  border-radius: 50%;
+  position: absolute;
+  bottom: clamp(20px, 4.5vw, 33px);
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* 嘴巴 */
+.mole-mouth {
+  width: clamp(14px, 3vw, 22px);
+  height: clamp(7px, 1.8vw, 11px);
+  border: 2px solid #654321;
+  border-top: none;
+  border-radius: 0 0 50% 50%;
+  position: absolute;
+  bottom: clamp(12px, 3vw, 20px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 单词标签 */
+.word-label {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  color: #333;
+  padding: clamp(6px, 1.5vw, 8px) clamp(12px, 2.5vw, 16px);
+  border-radius: 20px;
+  font-size: clamp(14px, 3vw, 18px);
+  font-weight: bold;
+  text-align: center;
+  margin-top: clamp(6px, 1.5vw, 10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 2px solid #FF8C00;
+  min-width: clamp(60px, 15vw, 100px);
+  white-space: nowrap;
+}
+
+.mole:hover .mole-face {
+  transform: scale(1.05);
+}

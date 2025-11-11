@@ -1,0 +1,54 @@
+// 2年级词汇数据
+const grade2Vocabulary = [
+  // 家庭成员
+  { chinese: "家庭", english: "family", englishDistractors: ["home", "parents", "house"], chineseDistractors: ["家", "父母", "房子"] },
+  { chinese: "父亲", english: "father", englishDistractors: ["dad", "papa", "parent"], chineseDistractors: ["爸爸", "爹", "家长"] },
+  { chinese: "母亲", english: "mother", englishDistractors: ["mom", "mama", "parent"], chineseDistractors: ["妈妈", "娘", "家长"] },
+  { chinese: "兄弟", english: "brother", englishDistractors: ["sister", "cousin", "friend"], chineseDistractors: ["姐妹", "表兄弟", "朋友"] },
+  { chinese: "姐妹", english: "sister", englishDistractors: ["brother", "cousin", "friend"], chineseDistractors: ["兄弟", "表姐妹", "朋友"] },
+  { chinese: "祖父", english: "grandpa", englishDistractors: ["father", "uncle", "grandfather"], chineseDistractors: ["父亲", "叔叔", "爷爷"] },
+  { chinese: "祖母", english: "grandma", englishDistractors: ["mother", "aunt", "grandmother"], chineseDistractors: ["母亲", "阿姨", "奶奶"] },
+  
+  // 季节天气
+  { chinese: "春天", english: "spring", englishDistractors: ["summer", "autumn", "warm"], chineseDistractors: ["夏天", "秋天", "温暖"] },
+  { chinese: "夏天", english: "summer", englishDistractors: ["spring", "autumn", "hot"], chineseDistractors: ["春天", "秋天", "炎热"] },
+  { chinese: "秋天", english: "autumn", englishDistractors: ["fall", "winter", "spring"], chineseDistractors: ["落叶", "冬天", "春天"] },
+  { chinese: "冬天", english: "winter", englishDistractors: ["autumn", "spring", "cold"], chineseDistractors: ["秋天", "春天", "寒冷"] },
+  { chinese: "温暖的", english: "warm", englishDistractors: ["hot", "cool", "cold"], chineseDistractors: ["炎热的", "凉爽的", "寒冷的"] },
+  { chinese: "炎热的", english: "hot", englishDistractors: ["warm", "cold", "cool"], chineseDistractors: ["温暖的", "寒冷的", "凉爽的"] },
+  { chinese: "凉爽的", english: "cool", englishDistractors: ["cold", "warm", "hot"], chineseDistractors: ["寒冷的", "温暖的", "炎热的"] },
+  { chinese: "寒冷的", english: "cold", englishDistractors: ["cool", "hot", "warm"], chineseDistractors: ["凉爽的", "炎热的", "温暖的"] },
+  
+  // 食物
+  { chinese: "蛋糕", english: "cake", englishDistractors: ["bread", "cookie", "pie"], chineseDistractors: ["面包", "饼干", "馋饼"] },
+  { chinese: "面包", english: "bread", englishDistractors: ["cake", "toast", "bun"], chineseDistractors: ["蛋糕", "烤面包", "包子"] },
+  { chinese: "牛奶", english: "milk", englishDistractors: ["water", "juice", "tea"], chineseDistractors: ["水", "果汁", "茶"] },
+  { chinese: "水", english: "water", englishDistractors: ["milk", "juice", "tea"], chineseDistractors: ["牛奶", "果汁", "茶"] },
+  { chinese: "鸡蛋", english: "egg", englishDistractors: ["chicken", "duck", "bird"], chineseDistractors: ["鸡肉", "鸭肉", "鸟"] },
+  { chinese: "米饽", english: "rice", englishDistractors: ["bread", "noodle", "food"], chineseDistractors: ["面包", "面条", "食物"] },
+
+  // 时间日期
+  { chinese: "星期一", english: "Monday", englishDistractors: ["Tuesday", "Sunday", "Friday"], chineseDistractors: ["星期二", "星期日", "星期五"] },
+  { chinese: "星期二", english: "Tuesday", englishDistractors: ["Monday", "Wednesday", "Thursday"], chineseDistractors: ["星期一", "星期三", "星期四"] },
+  { chinese: "星期三", english: "Wednesday", englishDistractors: ["Tuesday", "Thursday", "Friday"], chineseDistractors: ["星期二", "星期四", "星期五"] },
+  { chinese: "星期四", english: "Thursday", englishDistractors: ["Wednesday", "Friday", "Saturday"], chineseDistractors: ["星期三", "星期五", "星期六"] },
+  { chinese: "星期五", english: "Friday", englishDistractors: ["Thursday", "Saturday", "Sunday"], chineseDistractors: ["星期四", "星期六", "星期日"] },
+  { chinese: "星期六", english: "Saturday", englishDistractors: ["Friday", "Sunday", "Monday"], chineseDistractors: ["星期五", "星期日", "星期一"] },
+  { chinese: "星期日", english: "Sunday", englishDistractors: ["Saturday", "Monday", "Friday"], chineseDistractors: ["星期六", "星期一", "星期五"] },
+  
+  // 运动类
+  { chinese: "跑步", english: "run", englishDistractors: ["walk", "jump", "swim"], chineseDistractors: ["走路", "跳", "游泳"] },
+  { chinese: "跳", english: "jump", englishDistractors: ["run", "hop", "skip"], chineseDistractors: ["跑", "跳跃", "跳绳"] },
+  { chinese: "游泳", english: "swim", englishDistractors: ["run", "dive", "float"], chineseDistractors: ["跑步", "潜水", "漂浮"] },
+  { chinese: "踢球", english: "kick", englishDistractors: ["throw", "catch", "hit"], chineseDistractors: ["扔", "接", "打"] },
+  { chinese: "打篮球", english: "basketball", englishDistractors: ["football", "volleyball", "baseball"], chineseDistractors: ["踢足球", "打排球", "打棒球"] },
+  
+  // 衣物
+  { chinese: "衣服", english: "clothes", englishDistractors: ["dress", "shirt", "coat"], chineseDistractors: ["连衣裙", "衬衫", "外套"] },
+  { chinese: "衬衫", english: "shirt", englishDistractors: ["dress", "coat", "sweater"], chineseDistractors: ["连衣裙", "外套", "毛衣"] },
+  { chinese: "裤子", english: "pants", englishDistractors: ["shorts", "skirt", "jeans"], chineseDistractors: ["短裤", "裙子", "牛仔裤"] },
+  { chinese: "鞋子", english: "shoes", englishDistractors: ["socks", "boots", "sandals"], chineseDistractors: ["袜子", "靴子", "凉鞋"] },
+  { chinese: "帽子", english: "hat", englishDistractors: ["cap", "crown", "helmet"], chineseDistractors: ["帽子", "王冠", "头盔"] },
+];
+
+export default grade2Vocabulary;

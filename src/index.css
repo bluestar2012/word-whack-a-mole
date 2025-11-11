@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+
+body {
+  font-family: 'Microsoft YaHei', Arial, sans-serif;
+  overflow-x: hidden; /* 只隐藏横向滚动条 */
+  overflow-y: auto; /* 允许纵向滚动 */
+  background: linear-gradient(to bottom, #87CEEB 0%, #98D98E 100%);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  touch-action: pan-y;
+  min-height: 100vh; /* 最小高度 */
+  width: 100%;
+  /* 滚动条美化 */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(102, 126, 234, 0.6) rgba(0, 0, 0, 0.1);
+}
+
+/* Webkit/Edge 滚动条美化 */
+body::-webkit-scrollbar,
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+body::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+body::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #65408b 100%);
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 移动端滚动优化 */
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+  }
+  
+  #root {
+    min-height: 100vh;
+  }
+}
+
+/* 平板设备优化 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  body {
+    overflow-y: auto;
+  }
+  
+  #root {
+    min-height: 100vh;
+  }
+}
+
+/* Edge 浏览器特定优化 */
+@supports (-ms-ime-align: auto) {
+  body {
+    overflow-y: auto;
+    -ms-overflow-style: scrollbar;
+  }
+  
+  #root {
+    min-height: 100vh;
+  }
+}
