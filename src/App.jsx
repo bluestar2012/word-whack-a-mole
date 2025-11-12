@@ -6,10 +6,12 @@ import ScopeSelector from './components/ScopeSelector';
 import Settings from './components/Settings';
 import Leaderboard from './components/Leaderboard';
 import ExtremeChallenge from './components/ExtremeChallenge';
+import DonationPage from './components/DonationPage';
+import PaymentReceiveePage from './components/PaymentReceiveePage';
 import './App.css';
 
 function App() {
-  const [gameState, setGameState] = useState('home'); // home, scope, playing, gameover, settings, leaderboard, challenge
+  const [gameState, setGameState] = useState('home'); // home, scope, playing, gameover, settings, leaderboard, challenge, donation, paymentreceive
   const [selectedScope, setSelectedScope] = useState('1年级上册');
   const [finalScore, setFinalScore] = useState(0);
   const [level, setLevel] = useState(1);
@@ -29,6 +31,10 @@ function App() {
 
   const handleOpenChallenge = () => {
     setGameState('challenge');
+  };
+
+  const handleOpenDonation = () => {
+    setGameState('paymentreceive');
   };
 
   const handleScopeSelect = (scope) => {
@@ -102,6 +108,7 @@ function App() {
           onOpenSettings={handleOpenSettings}
           onOpenLeaderboard={handleOpenLeaderboard}
           onOpenChallenge={handleOpenChallenge}
+          onOpenDonation={handleOpenDonation}
         />
       )}
       {gameState === 'scope' && (
@@ -136,6 +143,16 @@ function App() {
         <GameOver 
           score={finalScore}
           onPlayAgain={handlePlayAgain}
+          onBackToHome={handleBackToHome}
+        />
+      )}
+      {gameState === 'donation' && (
+        <DonationPage 
+          onBackToHome={handleBackToHome}
+        />
+      )}
+      {gameState === 'paymentreceive' && (
+        <PaymentReceiveePage 
           onBackToHome={handleBackToHome}
         />
       )}

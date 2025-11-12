@@ -252,9 +252,10 @@
   background: -ms-linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
 }
 
-.exit-button {
-  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-  background: -ms-linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+.support-button {
+  background: linear-gradient(135deg, #52c77a 0%, #2db85d 100%);
+  background: -ms-linear-gradient(135deg, #52c77a 0%, #2db85d 100%);
+  font-weight: bold;
 }
 
 .footer {

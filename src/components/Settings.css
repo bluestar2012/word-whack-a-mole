@@ -454,10 +454,11 @@
   display: flex;
   gap: clamp(12px, 2vh, 15px);
   flex-shrink: 0;
+  align-items: center;
 }
 
 .reset-button,
-.back-button {
+.back-home-button {
   flex: 1;
   padding: clamp(14px, 3vw, 16px) clamp(20px, 4vw, 30px);
   font-size: clamp(16px, 3vw, 18px);
@@ -468,24 +469,29 @@
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   color: #fff;
+  height: clamp(44px, 8vw, 52px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
 .reset-button {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-.back-button {
+.back-home-button {
   background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
 }
 
 .reset-button:hover,
-.back-button:hover {
+.back-home-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .reset-button:active,
-.back-button:active {
+.back-home-button:active {
   transform: translateY(-1px);
 }
 

@@ -197,8 +197,28 @@
   background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
 
-.back-home {
+.back-home-button {
+  width: 100%;
+  padding: clamp(14px, 3vw, 18px) clamp(20px, 4vw, 30px);
+  font-size: clamp(16px, 3vw, 20px);
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  margin-top: clamp(10px, 2vh, 15px);
+}
+
+.back-home-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.back-home-button:active {
+  transform: translateY(-1px);
 }
 
 .encouragement {

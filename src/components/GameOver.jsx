@@ -76,8 +76,8 @@ function GameOver({ score, onPlayAgain, onBackToHome }) {
           <button className="result-button play-again" onClick={handlePlayAgain}>
             🔄 再玩一次
           </button>
-          <button className="result-button back-home" onClick={handleBackToHome}>
-            🏠 返回首页
+          <button className="back-home-button" onClick={handleBackToHome}>
+            ← 返回首页
           </button>
         </div>
       </div>

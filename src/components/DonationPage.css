@@ -1,0 +1,445 @@
+/* DonationPage.css - 打赏页面样式 */
+
+.donation-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f8fa;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.donation-container {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* 页面头部 */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #f0f0f0;
+}
+
+.back-home-button {
+  width: 100%;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+}
+
+.back-home-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.back-home-button:active {
+  transform: translateY(-1px);
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.placeholder {
+  width: 44px;
+}
+
+/* 感谢信息 */
+.donation-message {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.thank-you-emoji {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.message-text {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.message-subtext {
+  font-size: 16px;
+  color: #666;
+}
+
+/* 金额选择 */
+.amount-selection {
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.amount-options {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.amount-button {
+  padding: 15px 10px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: white;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.amount-button:hover {
+  border-color: #4a90e2;
+  background-color: #f5f9ff;
+}
+
+.amount-button.selected {
+  border-color: #4a90e2;
+  background-color: #4a90e2;
+  color: white;
+}
+
+.custom-amount {
+  margin-top: 20px;
+}
+
+.custom-amount-input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 18px;
+  text-align: center;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+.custom-amount-input:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.custom-amount-input.active {
+  border-color: #4a90e2;
+  background-color: #f5f9ff;
+}
+
+/* 支付方式 */
+.payment-methods {
+  margin-bottom: 40px;
+}
+
+.method-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.method-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 15px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.method-button:hover {
+  border-color: #4a90e2;
+  background-color: #f5f9ff;
+}
+
+.method-button.selected {
+  border-color: #4a90e2;
+  background-color: #f5f9ff;
+}
+
+.method-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.alipay-icon {
+  color: #1890ff;
+}
+
+.wechat-icon {
+  color: #09b83e;
+}
+
+.method-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* 支付按钮 */
+.payment-action {
+  text-align: center;
+}
+
+.pay-button {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: #4a90e2;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.pay-button-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.pay-button-text {
+  display: flex;
+  align-items: center;
+}
+
+.pay-button:hover:not(.disabled) {
+  background-color: #357abd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}
+
+.pay-button.disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.loading-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* 支付弹窗样式 */
+.payment-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.payment-modal {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+  width: 350px;
+  text-align: center;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.modal-header h3 {
+  color: #333;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.close-button:hover {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.qr-code-container {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+.payment-qr-code {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.payment-amount {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff6b6b;
+  margin: 1rem 0;
+}
+
+.payment-instruction {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.payment-status {
+  color: #4a90e2;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* 感谢弹窗 */
+.thank-you-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.thank-you-card {
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+  width: 400px;
+}
+
+.celebration-emojis {
+  font-size: 40px;
+  margin-bottom: 20px;
+  animation: bounce 0.5s infinite alternate;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
+}
+
+.thank-you-content h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.thank-you-content p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.countdown {
+  font-size: 14px;
+  color: #999;
+  margin-top: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .donation-container {
+    padding: 20px;
+    border-radius: 15px;
+  }
+  
+  .amount-options {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .method-options {
+    grid-template-columns: 1fr;
+  }
+  
+  .pay-button {
+    padding: 15px;
+    font-size: 18px;
+  }
+}

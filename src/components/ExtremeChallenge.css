@@ -418,18 +418,18 @@
   background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
 }
 
-.back-button {
+.back-home-button {
   background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
 }
 
 .restart-button:hover,
-.back-button:hover {
+.back-home-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 .restart-button:active,
-.back-button:active {
+.back-home-button:active {
   transform: translateY(-1px);
 }
 

@@ -286,8 +286,8 @@ function ExtremeChallenge({ onBack }) {
           <h2>没有逃脱的地鼠！</h2>
           <p>你还没有放过的地鼠</p>
           <p>快去游戏中猎鼠吧！</p>
-          <button className="back-button" onClick={handleBackClick}>
-            返回首页
+          <button className="back-home-button" onClick={handleBackClick}>
+            ← 返回首页
           </button>
         </div>
       </div>
@@ -345,7 +345,7 @@ function ExtremeChallenge({ onBack }) {
                 🔄 再次猎鼠
               </button>
             )}
-            <button className="back-button" onClick={handleBackClick}>
+            <button className="back-home-button" onClick={handleBackClick}>
               ← 返回首页
             </button>
           </div>

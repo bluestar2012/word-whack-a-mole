@@ -129,7 +129,7 @@ function Leaderboard({ onBack }) {
               🗑️ 清空记录
             </button>
           )}
-          <button className="back-button" onClick={handleBackClick}>
+          <button className="back-home-button" onClick={handleBackClick}>
             ← 返回首页
           </button>
         </div>

@@ -3,7 +3,7 @@ import soundManager from '../utils/soundManager';
 import wrongWordsManager from '../utils/wrongWordsManager';
 import './HomePage.css';
 
-function HomePage({ onStartGame, onOpenSettings, onOpenLeaderboard, onOpenChallenge }) {
+function HomePage({ onStartGame, onOpenSettings, onOpenLeaderboard, onOpenChallenge, onOpenDonation }) {
   const handleButtonClick = (callback) => {
     soundManager.playClickSound();
     callback();
@@ -35,8 +35,8 @@ function HomePage({ onStartGame, onOpenSettings, onOpenLeaderboard, onOpenChalle
           <button className="menu-button settings-button" onClick={() => handleButtonClick(onOpenSettings)}>
             ⚙️ 设置
           </button>
-          <button className="menu-button exit-button" onClick={() => { soundManager.playClickSound(); window.close(); }}>
-            🚪 退出
+          <button className="menu-button support-button" onClick={() => handleButtonClick(onOpenDonation)}>
+            👍 点赞支持
           </button>
         </div>
 

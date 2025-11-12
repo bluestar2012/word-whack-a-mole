@@ -321,7 +321,7 @@
   box-shadow: 0 0 10px rgba(144, 238, 144, 0.6);
 }
 
-.back-button {
+.back-home-button {
   width: 100%;
   padding: clamp(12px, 2.5vw, 15px);
   font-size: clamp(16px, 3vw, 18px);
@@ -345,13 +345,13 @@
   user-select: none;
 }
 
-.back-button:hover {
+.back-home-button:hover {
   -ms-transform: translateY(-3px);
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-.back-button:active {
+.back-home-button:active {
   -ms-transform: translateY(-1px);
   transform: translateY(-1px);
 }
@@ -363,7 +363,7 @@
     transform: none;
   }
   
-  .back-button:hover {
+  .back-home-button:hover {
     -ms-transform: none;
     transform: none;
   }
