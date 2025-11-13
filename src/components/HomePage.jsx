@@ -1,6 +1,7 @@
 import React from 'react';
 import soundManager from '../utils/soundManager';
 import wrongWordsManager from '../utils/wrongWordsManager';
+import moleGif from '../res/mole.gif';
 import './HomePage.css';
 
 function HomePage({ onStartGame, onOpenSettings, onOpenLeaderboard, onOpenChallenge, onOpenDonation }) {
@@ -16,7 +17,7 @@ function HomePage({ onStartGame, onOpenSettings, onOpenLeaderboard, onOpenChalle
     <div className="home-page">
       <div className="home-content">
         <div className="title-container">
-          <h1 className="game-title">🎯 快乐打地鼠 🎯</h1>
+          <img src={moleGif} alt="快乐打地鼠" className="game-title-gif" />
           <p className="game-subtitle">Word Whack-A-Mole</p>
           <p className="game-description">快乐猎鼠，轻松记单词！</p>
         </div>

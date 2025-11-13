@@ -110,6 +110,20 @@
   font-weight: bold;
 }
 
+/* GIF标题图片样式 */
+.game-title-gif {
+  max-width: clamp(200px, 60vw, 400px);
+  height: auto;
+  margin-bottom: clamp(4px, 0.8vh, 8px);
+  object-fit: contain;
+  /* 融合过滤效果：提高饱和度，增加对比度，添加阴影 */
+  filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.3)) saturate(1.15) contrast(1.1) brightness(1.05);
+  animation: fadeInDown 1s ease-out;
+  /* 背景融合 */
+  mix-blend-mode: screen;
+  opacity: 0.95;
+}
+
 .game-subtitle {
   font-size: clamp(16px, 3vw, 24px); /* 略微减小最大字号 */
   color: #ffd700;
