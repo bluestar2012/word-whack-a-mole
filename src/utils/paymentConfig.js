@@ -29,7 +29,10 @@ const paymentConfig = {
     charset: 'UTF-8',
     
     // 签名方式
-    signType: 'RSA2'
+    signType: 'RSA2',
+
+    // 个人收款码 - 个人收款码url
+    personUrl: 'https://qr.alipay.com/fkx1630051x39cpaknxiy6c'
   },
   
   // 微信支付配置
@@ -53,8 +56,11 @@ const paymentConfig = {
     certPath: '/path/to/cert/apiclient_cert.pem',
     keyPath: '/path/to/cert/apiclient_key.pem',
     
-    // 交易类型
-    tradeType: 'JSAPI' // 公众号支付
+    // 交易类型 - 公众号支付
+    tradeType: 'JSAPI',
+
+    // 个人收款码 - 个人收款码url
+    personUrl: 'wxp://f2f06x2jGVBCo4x1JFthTUbeeWpu7iMis4Lg252wx2w9uRrcbG_TKANu92hHYc8Llxcm'
   },
   
   // 通用配置
