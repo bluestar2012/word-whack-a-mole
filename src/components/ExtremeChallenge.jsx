@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import soundManager from '../utils/soundManager';
 import wrongWordsManager from '../utils/wrongWordsManager';
 import Mole from './Mole';
+import ResultCard from './ResultCard';
 import './ExtremeChallenge.css';
 
 function ExtremeChallenge({ onBack }) {
@@ -19,6 +20,9 @@ function ExtremeChallenge({ onBack }) {
   const [moleStyle, setMoleStyle] = useState('default');
   const [isGameOver, setIsGameOver] = useState(false);
   const [masteredWords, setMasteredWords] = useState([]); // 已掌握的单词
+  const [showResultCard, setShowResultCard] = useState(false);
+  const [resultMole, setResultMole] = useState(null);
+  const [isTimerPaused, setIsTimerPaused] = useState(false);
 
   // 初始化游戏
   useEffect(() => {
@@ -64,12 +68,17 @@ function ExtremeChallenge({ onBack }) {
       return;
     }
 
+    // 如果在显示结果卡片，倒计时暂停
+    if (isTimerPaused) {
+      return;
+    }
+
     const timer = setInterval(() => {
       setTimeLeft(prev => prev - 1);
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [timeLeft, wrongWords, isGameOver]);
+  }, [timeLeft, wrongWords, isGameOver, isTimerPaused]);
 
   // 开始新一轮
   const startNewRound = (words = wrongWords) => {
@@ -164,10 +173,13 @@ function ExtremeChallenge({ onBack }) {
     // 先发音
     await soundManager.speakWord(mole.word, questionType === 'chinese');
 
-    if (mole.isCorrect) {
+    let points = 0;
+    let isCorrect = mole.isCorrect;
+    
+    if (isCorrect) {
       // 答对了
       const comboBonus = Math.floor(combo / 3) * 5;
-      const points = 10 + comboBonus;
+      points = 10 + comboBonus;
       setScore(prev => prev + points);
       const newCombo = combo + 1;
       setCombo(newCombo);
@@ -175,7 +187,6 @@ function ExtremeChallenge({ onBack }) {
         setMaxCombo(newCombo);
       }
       setCorrectCount(prev => prev + 1);
-      setShowFeedback({ type: 'correct', points });
       soundManager.playCorrectSound();
 
       // 标记为正确，检查是否连续答对3次
@@ -184,11 +195,6 @@ function ExtremeChallenge({ onBack }) {
       if (correctStreak >= 3) {
         // 已掌握，从错题本移除
         setMasteredWords(prev => [...prev, mole.wordData.english]);
-        setShowFeedback({ 
-          type: 'mastered', 
-          points,
-          word: mole.wordData.english 
-        });
       }
 
       // 更新错题列表
@@ -197,16 +203,24 @@ function ExtremeChallenge({ onBack }) {
 
       // 检查是否所有错题都已掌握
       if (updatedWords.length === 0) {
+        setShowResultCard(false);
+        setIsTimerPaused(false);
         setTimeout(() => {
           setIsGameOver(true);
         }, 1000);
+        setResultMole({
+          isCorrect,
+          points,
+          wordData: mole.wordData
+        });
+        setShowResultCard(true);
+        setIsTimerPaused(true);
         return;
       }
     } else {
       // 答错了
       setScore(prev => Math.max(0, prev - 5));
       setCombo(0);
-      setShowFeedback({ type: 'wrong' });
       soundManager.playWrongSound();
 
       // 标记为错误
@@ -215,15 +229,26 @@ function ExtremeChallenge({ onBack }) {
 
     setTotalAnswered(prev => prev + 1);
 
+    // 显示结果卡片并暂停倒计时
+    setResultMole({
+      isCorrect,
+      points,
+      wordData: mole.wordData
+    });
+    setShowResultCard(true);
+    setIsTimerPaused(true);
+
+    // 3秒后关闭卡片并继续游戏
     setTimeout(() => {
-      setShowFeedback(null);
+      setShowResultCard(false);
+      setIsTimerPaused(false);
       const updatedWords = wrongWordsManager.getAllWrongWords();
       if (updatedWords.length > 0) {
         startNewRound(updatedWords);
       } else {
         setIsGameOver(true);
       }
-    }, 800);
+    }, 3000);
   };
 
   // 游戏结束
@@ -407,6 +432,16 @@ function ExtremeChallenge({ onBack }) {
           </div>
         ))}
       </div>
+
+      {/* 结果卡片 */}
+      <ResultCard 
+        mole={resultMole}
+        isVisible={showResultCard}
+        onClose={() => {
+          setShowResultCard(false);
+          setIsTimerPaused(false);
+        }}
+      />
 
       {showFeedback && (
         <div className={`feedback ${showFeedback.type}`}>

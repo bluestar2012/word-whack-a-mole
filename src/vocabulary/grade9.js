@@ -1,0 +1,74 @@
+// 9年级词汇数据（初三）
+const grade9Vocabulary = [
+  // 环境与可持续发展
+  { chinese: "环保", english: "environmental protection", englishDistractors: ["ecology", "sustainability", "conservation"], chineseDistractors: ["生态", "可持续发展", "保护"] },
+  { chinese: "污水", english: "sewage", englishDistractors: ["wastewater", "drainage", "discharge"], chineseDistractors: ["废水", "排水", "排放"] },
+  { chinese: "能源", english: "energy", englishDistractors: ["fuel", "power", "resources"], chineseDistractors: ["燃料", "电力", "资源"] },
+  { chinese: "再生能源", english: "renewable energy", englishDistractors: ["sustainable energy", "clean energy", "alternative energy"], chineseDistractors: ["可持续能源", "清洁能源", "替代能源"] },
+  { chinese: "回收", english: "recycle", englishDistractors: ["reuse", "recovery", "waste management"], chineseDistractors: ["重复使用", "回收", "废物管理"] },
+  { chinese: "温室气体", english: "greenhouse gas", englishDistractors: ["emissions", "carbon", "pollution"], chineseDistractors: ["排放", "碳", "污染"] },
+  { chinese: "气候变化", english: "climate change", englishDistractors: ["global warming", "weather pattern", "temperature"], chineseDistractors: ["全球变暖", "天气模式", "温度"] },
+  { chinese: "濒危物种", english: "endangered species", englishDistractors: ["extinct animal", "wildlife", "rare animal"], chineseDistractors: ["灭绝动物", "野生动物", "稀有动物"] },
+  
+  // 高等教育与职业
+  { chinese: "大学", english: "university", englishDistractors: ["college", "institute", "academy"], chineseDistractors: ["学院", "研究所", "学会"] },
+  { chinese: "专业", english: "major", englishDistractors: ["subject", "discipline", "field"], chineseDistractors: ["学科", "纪律", "领域"] },
+  { chinese: "学位", english: "degree", englishDistractors: ["diploma", "certificate", "qualification"], chineseDistractors: ["文凭", "证书", "资格"] },
+  { chinese: "研究", english: "research", englishDistractors: ["study", "investigation", "inquiry"], chineseDistractors: ["研究", "调查", "询问"] },
+  { chinese: "论文", english: "thesis", englishDistractors: ["essay", "paper", "dissertation"], chineseDistractors: ["文章", "论文", "博士论文"] },
+  { chinese: "职业", english: "profession", englishDistractors: ["occupation", "career", "job"], chineseDistractors: ["职业", "工作", "岗位"] },
+  { chinese: "薪水", english: "salary", englishDistractors: ["wage", "pay", "income"], chineseDistractors: ["工资", "薪酬", "收入"] },
+  { chinese: "简历", english: "resume", englishDistractors: ["CV", "application", "portfolio"], chineseDistractors: ["个人资料", "申请", "作品集"] },
+  
+  // 全球化与国际
+  { chinese: "全球化", english: "globalization", englishDistractors: ["worldwide", "international", "global"], chineseDistractors: ["全球", "国际", "世界"] },
+  { chinese: "贸易", english: "trade", englishDistractors: ["commerce", "business", "export"], chineseDistractors: ["商业", "生意", "出口"] },
+  { chinese: "进口", english: "import", englishDistractors: ["export", "shipping", "cargo"], chineseDistractors: ["出口", "运输", "货物"] },
+  { chinese: "出口", english: "export", englishDistractors: ["import", "shipping", "cargo"], chineseDistractors: ["进口", "运输", "货物"] },
+  { chinese: "市场", english: "market", englishDistractors: ["economy", "trade", "commerce"], chineseDistractors: ["经济", "贸易", "商业"] },
+  { chinese: "企业", english: "enterprise", englishDistractors: ["company", "corporation", "business"], chineseDistractors: ["公司", "股份公司", "生意"] },
+  { chinese: "消费者", english: "consumer", englishDistractors: ["customer", "buyer", "client"], chineseDistractors: ["顾客", "买家", "客户"] },
+  { chinese: "产品", english: "product", englishDistractors: ["commodity", "goods", "merchandise"], chineseDistractors: ["商品", "货物", "商品"] },
+  
+  // 社会问题与权利
+  { chinese: "平等", english: "equality", englishDistractors: ["equal", "fair", "justice"], chineseDistractors: ["相等", "公平", "正义"] },
+  { chinese: "人权", english: "human rights", englishDistractors: ["rights", "freedom", "justice"], chineseDistractors: ["权利", "自由", "正义"] },
+  { chinese: "法律", english: "law", englishDistractors: ["legal", "regulation", "rule"], chineseDistractors: ["法律", "规章", "规则"] },
+  { chinese: "正义", english: "justice", englishDistractors: ["judge", "court", "trial"], chineseDistractors: ["法官", "法庭", "审判"] },
+  { chinese: "贫困", english: "poverty", englishDistractors: ["poor", "destitution", "deprivation"], chineseDistractors: ["贫穷", "匮乏", "剥夺"] },
+  { chinese: "教育权", english: "right to education", englishDistractors: ["education", "learning", "knowledge"], chineseDistractors: ["教育", "学习", "知识"] },
+  { chinese: "民主", english: "democracy", englishDistractors: ["democratic", "representative", "freedom"], chineseDistractors: ["民主的", "代表", "自由"] },
+  { chinese: "自由", english: "freedom", englishDistractors: ["liberty", "independence", "rights"], chineseDistractors: ["自由", "独立", "权利"] },
+  
+  // 科技创新
+  { chinese: "人工智能", english: "artificial intelligence", englishDistractors: ["AI", "machine learning", "robotics"], chineseDistractors: ["人工智能", "机器学习", "机器人"] },
+  { chinese: "互联网", english: "internet", englishDistractors: ["web", "online", "digital"], chineseDistractors: ["网络", "在线", "数字"] },
+  { chinese: "数据", english: "data", englishDistractors: ["information", "statistics", "evidence"], chineseDistractors: ["信息", "统计", "证据"] },
+  { chinese: "软件", english: "software", englishDistractors: ["program", "application", "system"], chineseDistractors: ["程序", "应用", "系统"] },
+  { chinese: "硬件", english: "hardware", englishDistractors: ["equipment", "device", "computer"], chineseDistractors: ["设备", "设备", "计算机"] },
+  { chinese: "编程", english: "programming", englishDistractors: ["code", "coding", "developer"], chineseDistractors: ["代码", "编码", "开发者"] },
+  { chinese: "虚拟现实", english: "virtual reality", englishDistractors: ["reality", "virtual", "simulation"], chineseDistractors: ["现实", "虚拟", "模拟"] },
+  { chinese: "物联网", english: "Internet of Things", englishDistractors: ["IoT", "network", "connectivity"], chineseDistractors: ["物联网", "网络", "连接"] },
+  
+  // 个人发展
+  { chinese: "成功", english: "success", englishDistractors: ["achievement", "accomplishment", "triumph"], chineseDistractors: ["成就", "完成", "胜利"] },
+  { chinese: "梦想", english: "dream", englishDistractors: ["goal", "aspiration", "hope"], chineseDistractors: ["目标", "愿望", "希望"] },
+  { chinese: "努力", english: "effort", englishDistractors: ["work", "try", "attempt"], chineseDistractors: ["工作", "尝试", "企图"] },
+  { chinese: "坚持", english: "persistence", englishDistractors: ["perseverance", "determination", "resilience"], chineseDistractors: ["毅力", "决定", "韧性"] },
+  { chinese: "自信", english: "confidence", englishDistractors: ["confidence", "self-esteem", "trust"], chineseDistractors: ["自信", "自尊", "信任"] },
+  { chinese: "团队", english: "team", englishDistractors: ["group", "crew", "squad"], chineseDistractors: ["团队", "机组人员", "小队"] },
+  { chinese: "合作", english: "cooperation", englishDistractors: ["collaborate", "work together", "teamwork"], chineseDistractors: ["协作", "一起工作", "团队合作"] },
+  { chinese: "领导", english: "leadership", englishDistractors: ["leader", "management", "guidance"], chineseDistractors: ["领导者", "管理", "指导"] },
+  
+  // 社会与文化认知
+  { chinese: "民族", english: "ethnic", englishDistractors: ["ethnicity", "race", "heritage"], chineseDistractors: ["民族", "种族", "遗产"] },
+  { chinese: "传统", english: "tradition", englishDistractors: ["traditional", "custom", "culture"], chineseDistractors: ["传统的", "风俗", "文化"] },
+  { chinese: "宗教", english: "religion", englishDistractors: ["belief", "faith", "spiritual"], chineseDistractors: ["信念", "信仰", "精神"] },
+  { chinese: "礼仪", english: "etiquette", englishDistractors: ["manners", "courtesy", "protocol"], chineseDistractors: ["举止", "礼貌", "议定书"] },
+  { chinese: "习俗", english: "custom", englishDistractors: ["habit", "tradition", "practice"], chineseDistractors: ["习惯", "传统", "实践"] },
+  { chinese: "价值观", english: "values", englishDistractors: ["worth", "importance", "belief"], chineseDistractors: ["价值", "重要性", "信念"] },
+  { chinese: "多元文化", english: "multiculturalism", englishDistractors: ["diversity", "culture", "plurality"], chineseDistractors: ["多样性", "文化", "多元"] },
+  { chinese: "尊重", english: "respect", englishDistractors: ["honor", "regard", "admiration"], chineseDistractors: ["荣誉", "重视", "敬佩"] },
+];
+
+export default grade9Vocabulary;

@@ -42,7 +42,7 @@ function HomePage({ onStartGame, onOpenSettings, onOpenLeaderboard, onOpenChalle
         </div>
 
         <div className="footer">
-          <p>适合 6-12 岁小猎人 | 人教版新起点英语</p>
+          <p>适合 6-15 岁小猎人 | 人教版新起点英语</p>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { getVocabulary } from '../vocabularyData';
 import Mole from './Mole';
+import ResultCard from './ResultCard';
 import soundManager from '../utils/soundManager';
 import wrongWordsManager from '../utils/wrongWordsManager';
 import learningProgressManager from '../utils/learningProgressManager';
@@ -19,6 +20,9 @@ function GamePlay({ scope, level, onGameOver }) {
   const [moleStyle, setMoleStyle] = useState('default');
   const [gameDuration, setGameDuration] = useState(60);
   const [maxCombo, setMaxCombo] = useState(0);
+  const [showResultCard, setShowResultCard] = useState(false);
+  const [resultMole, setResultMole] = useState(null);
+  const [isTimerPaused, setIsTimerPaused] = useState(false);
 
   // 初始化游戏
   useEffect(() => {
@@ -67,12 +71,17 @@ function GamePlay({ scope, level, onGameOver }) {
       return;
     }
 
+    // 如果在显示结果卡片，倒计时暂停
+    if (isTimerPaused) {
+      return;
+    }
+
     const timer = setInterval(() => {
       setTimeLeft(prev => prev - 1);
     }, 1000);
 
     return () => clearInterval(timer);
-  }, [timeLeft, score, maxCombo, gameDuration, onGameOver]);
+  }, [timeLeft, score, maxCombo, gameDuration, onGameOver, isTimerPaused]);
 
   // 开始新一轮
   const startNewRound = useCallback(() => {
@@ -144,10 +153,13 @@ function GamePlay({ scope, level, onGameOver }) {
     // 先发音
     await soundManager.speakWord(mole.word, questionType === 'chinese');
     
-    // 再显示反馈
-    if (mole.isCorrect) {
+    // 计算结果
+    let points = 0;
+    let isCorrect = mole.isCorrect;
+    
+    if (isCorrect) {
       const comboBonus = Math.floor(combo / 3) * 5;
-      const points = 10 + comboBonus;
+      points = 10 + comboBonus;
       setScore(prev => prev + points);
       const newCombo = combo + 1;
       setCombo(newCombo);
@@ -155,7 +167,6 @@ function GamePlay({ scope, level, onGameOver }) {
       if (newCombo > maxCombo) {
         setMaxCombo(newCombo);
       }
-      setShowFeedback({ type: 'correct', points });
       soundManager.playCorrectSound();
       
       // 答对了，标记为已掌握
@@ -163,7 +174,6 @@ function GamePlay({ scope, level, onGameOver }) {
     } else {
       setScore(prev => Math.max(0, prev - 5));
       setCombo(0);
-      setShowFeedback({ type: 'wrong' });
       soundManager.playWrongSound();
       
       // 答错了，添加到错题本
@@ -172,10 +182,21 @@ function GamePlay({ scope, level, onGameOver }) {
       learningProgressManager.unmarkWordMastered(mole.wordData.english);
     }
 
+    // 显示结果卡片并暂停倒计时
+    setResultMole({
+      isCorrect,
+      points,
+      wordData: mole.wordData
+    });
+    setShowResultCard(true);
+    setIsTimerPaused(true);
+
+    // 3秒后关闭卡片并继续游戏
     setTimeout(() => {
-      setShowFeedback(null);
+      setShowResultCard(false);
+      setIsTimerPaused(false);
       startNewRound();
-    }, 800);
+    }, 3000);
   };
 
   // 切换静音（只关闭背景音乐）
@@ -255,7 +276,17 @@ function GamePlay({ scope, level, onGameOver }) {
         )}
       </div>
 
-      {/* 反馈提示 */}
+      {/* 结果卡片 */}
+      <ResultCard 
+        mole={resultMole}
+        isVisible={showResultCard}
+        onClose={() => {
+          setShowResultCard(false);
+          setIsTimerPaused(false);
+        }}
+      />
+
+      {/* 反馈提示 (如果需要保留原有反馈，可选) */}
       {showFeedback && (
         <div className={`feedback ${showFeedback.type}`}>
           {showFeedback.type === 'correct' ? (

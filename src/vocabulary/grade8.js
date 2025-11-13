@@ -1,0 +1,79 @@
+// 8年级词汇数据（初二）
+const grade8Vocabulary = [
+  // 医疗与健康
+  { chinese: "医生", english: "doctor", englishDistractors: ["physician", "nurse", "surgeon"], chineseDistractors: ["医生", "护士", "外科医生"] },
+  { chinese: "护士", english: "nurse", englishDistractors: ["doctor", "carer", "attendant"], chineseDistractors: ["医生", "看护者", "服务员"] },
+  { chinese: "医院", english: "hospital", englishDistractors: ["clinic", "health center", "infirmary"], chineseDistractors: ["诊所", "卫生中心", "医务室"] },
+  { chinese: "病", english: "illness", englishDistractors: ["disease", "sickness", "infection"], chineseDistractors: ["疾病", "患病", "感染"] },
+  { chinese: "药", english: "medicine", englishDistractors: ["drug", "pill", "tablet"], chineseDistractors: ["药物", "药丸", "药片"] },
+  { chinese: "健康", english: "health", englishDistractors: ["fitness", "wellness", "condition"], chineseDistractors: ["健身", "幸福感", "状况"] },
+  { chinese: "运动", english: "exercise", englishDistractors: ["sport", "activity", "training"], chineseDistractors: ["运动", "活动", "训练"] },
+  { chinese: "病人", english: "patient", englishDistractors: ["sick person", "sufferer", "victim"], chineseDistractors: ["患者", "受难者", "受害者"] },
+  
+  // 科学与技术
+  { chinese: "实验", english: "experiment", englishDistractors: ["test", "trial", "trial"], chineseDistractors: ["测试", "试验", "尝试"] },
+  { chinese: "科学", english: "science", englishDistractors: ["art", "knowledge", "study"], chineseDistractors: ["艺术", "知识", "研究"] },
+  { chinese: "化学", english: "chemistry", englishDistractors: ["physics", "biology", "geology"], chineseDistractors: ["物理", "生物", "地质学"] },
+  { chinese: "物理", english: "physics", englishDistractors: ["chemistry", "biology", "mathematics"], chineseDistractors: ["化学", "生物", "数学"] },
+  { chinese: "生物", english: "biology", englishDistractors: ["physics", "chemistry", "geology"], chineseDistractors: ["物理", "化学", "地质学"] },
+  { chinese: "技术", english: "technology", englishDistractors: ["technique", "method", "engineering"], chineseDistractors: ["技巧", "方法", "工程"] },
+  { chinese: "电", english: "electricity", englishDistractors: ["electric", "power", "energy"], chineseDistractors: ["电气", "电力", "能量"] },
+  { chinese: "机器", english: "machine", englishDistractors: ["engine", "device", "apparatus"], chineseDistractors: ["引擎", "设备", "器械"] },
+  
+  // 艺术与文化
+  { chinese: "音乐", english: "music", englishDistractors: ["song", "tune", "melody"], chineseDistractors: ["歌曲", "曲调", "旋律"] },
+  { chinese: "美术", english: "art", englishDistractors: ["painting", "drawing", "craft"], chineseDistractors: ["绘画", "素描", "手工艺"] },
+  { chinese: "电影", english: "film", englishDistractors: ["movie", "cinema", "picture"], chineseDistractors: ["电影", "电影院", "图片"] },
+  { chinese: "戏剧", english: "drama", englishDistractors: ["play", "act", "performance"], chineseDistractors: ["戏剧", "表演", "演出"] },
+  { chinese: "书", english: "book", englishDistractors: ["magazine", "journal", "newspaper"], chineseDistractors: ["杂志", "日志", "报纸"] },
+  { chinese: "诗歌", english: "poetry", englishDistractors: ["poem", "verse", "prose"], chineseDistractors: ["诗", "韵文", "散文"] },
+  { chinese: "小说", english: "novel", englishDistractors: ["story", "tale", "narrative"], chineseDistractors: ["故事", "传说", "叙述"] },
+  { chinese: "颜色", english: "color", englishDistractors: ["hue", "shade", "tone"], chineseDistractors: ["色调", "阴影", "音调"] },
+  
+  // 天气与自然
+  { chinese: "天气", english: "weather", englishDistractors: ["climate", "conditions", "forecast"], chineseDistractors: ["气候", "状况", "预报"] },
+  { chinese: "下雨", english: "rain", englishDistractors: ["rainfall", "downpour", "shower"], chineseDistractors: ["降雨", "倾盆大雨", "阵雨"] },
+  { chinese: "下雪", english: "snow", englishDistractors: ["snowfall", "blizzard", "flurry"], chineseDistractors: ["降雪", "暴风雪", "细雪"] },
+  { chinese: "风", english: "wind", englishDistractors: ["breeze", "gust", "draft"], chineseDistractors: ["微风", "阵风", "气流"] },
+  { chinese: "云", english: "cloud", englishDistractors: ["clouds", "mist", "fog"], chineseDistractors: ["云", "薄雾", "雾"] },
+  { chinese: "太阳", english: "sun", englishDistractors: ["sunshine", "sunlight", "solar"], chineseDistractors: ["阳光", "日光", "太阳的"] },
+  { chinese: "月亮", english: "moon", englishDistractors: ["lunar", "moonlight", "crescent"], chineseDistractors: ["月球的", "月光", "新月"] },
+  { chinese: "星星", english: "star", englishDistractors: ["stars", "constellation", "celestial"], chineseDistractors: ["星星", "星座", "天体"] },
+  { chinese: "山", english: "mountain", englishDistractors: ["hill", "peak", "range"], chineseDistractors: ["山丘", "山峰", "山脉"] },
+  { chinese: "河", english: "river", englishDistractors: ["stream", "creek", "brook"], chineseDistractors: ["溪流", "小溪", "小河"] },
+  { chinese: "湖", english: "lake", englishDistractors: ["pond", "reservoir", "pool"], chineseDistractors: ["池塘", "水库", "游泳池"] },
+  { chinese: "花", english: "flower", englishDistractors: ["bloom", "blossom", "petal"], chineseDistractors: ["花朵", "花蕾", "花瓣"] },
+  { chinese: "树", english: "tree", englishDistractors: ["plant", "shrub", "sapling"], chineseDistractors: ["植物", "灌木", "树苗"] },
+  
+  // 城市与地点
+  { chinese: "城市", english: "city", englishDistractors: ["town", "metropolis", "urban area"], chineseDistractors: ["镇", "大都市", "城市区"] },
+  { chinese: "街道", english: "street", englishDistractors: ["road", "avenue", "lane"], chineseDistractors: ["公路", "大街", "小巷"] },
+  { chinese: "广场", english: "square", englishDistractors: ["plaza", "courtyard", "park"], chineseDistractors: ["广场", "院子", "公园"] },
+  { chinese: "公园", english: "park", englishDistractors: ["garden", "grounds", "green space"], chineseDistractors: ["花园", "场地", "绿地"] },
+  { chinese: "公路", english: "highway", englishDistractors: ["road", "expressway", "thoroughfare"], chineseDistractors: ["道路", "高速公路", "干道"] },
+  { chinese: "桥", english: "bridge", englishDistractors: ["viaduct", "overpass", "span"], chineseDistractors: ["高架桥", "天桥", "跨度"] },
+  { chinese: "超市", english: "supermarket", englishDistractors: ["grocery", "market", "store"], chineseDistractors: ["杂货店", "市场", "商店"] },
+  { chinese: "商店", english: "shop", englishDistractors: ["store", "boutique", "outlet"], chineseDistractors: ["店铺", "精品店", "折扣店"] },
+  { chinese: "餐厅", english: "restaurant", englishDistractors: ["cafe", "diner", "bistro"], chineseDistractors: ["咖啡馆", "食堂", "酒吧"] },
+  { chinese: "电影院", english: "cinema", englishDistractors: ["theater", "multiplex", "screening room"], chineseDistractors: ["剧院", "影城", "放映室"] },
+  
+  // 职业与工作
+  { chinese: "工人", english: "worker", englishDistractors: ["laborer", "employee", "staff"], chineseDistractors: ["劳动者", "雇员", "员工"] },
+  { chinese: "农民", english: "farmer", englishDistractors: ["peasant", "cultivator", "grower"], chineseDistractors: ["农民", "种植者", "生产者"] },
+  { chinese: "军人", english: "soldier", englishDistractors: ["warrior", "fighter", "serviceman"], chineseDistractors: ["战士", "战斗者", "军人"] },
+  { chinese: "警察", english: "police", englishDistractors: ["officer", "constable", "cop"], chineseDistractors: ["警官", "巡捕", "警员"] },
+  { chinese: "司机", english: "driver", englishDistractors: ["chauffeur", "cabbie", "motorist"], chineseDistractors: ["司机", "出租车司机", "机动车驾驶人"] },
+  { chinese: "电工", english: "electrician", englishDistractors: ["electrician", "technician", "engineer"], chineseDistractors: ["电工", "技术员", "工程师"] },
+  { chinese: "厨师", english: "cook", englishDistractors: ["chef", "baker", "kitchener"], chineseDistractors: ["厨师", "面包师", "厨房工作人员"] },
+  { chinese: "店员", english: "shop assistant", englishDistractors: ["cashier", "clerk", "attendant"], chineseDistractors: ["收银员", "文员", "服务员"] },
+  
+  // 情感与性格
+  { chinese: "高兴", english: "happy", englishDistractors: ["cheerful", "glad", "pleased"], chineseDistractors: ["开心", "高兴", "满意"] },
+  { chinese: "难过", english: "sad", englishDistractors: ["unhappy", "sorrowful", "melancholy"], chineseDistractors: ["不高兴", "悲哀", "忧郁"] },
+  { chinese: "生气", english: "angry", englishDistractors: ["furious", "cross", "mad"], chineseDistractors: ["发怒", "恼怒", "疯狂"] },
+  { chinese: "害怕", english: "afraid", englishDistractors: ["scared", "frightened", "terrified"], chineseDistractors: ["受惊", "惊吓", "恐吓"] },
+  { chinese: "惊讶", english: "surprised", englishDistractors: ["shocked", "astonished", "amazed"], chineseDistractors: ["震惊", "惊讶", "惊奇"] },
+  { chinese: "疲劳", english: "tired", englishDistractors: ["weary", "exhausted", "fatigued"], chineseDistractors: ["疲倦", "筋疲力尽", "疲惫"] },
+];
+
+export default grade8Vocabulary;
