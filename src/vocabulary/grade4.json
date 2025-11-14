@@ -1,0 +1,72 @@
+[
+  {
+    "category": "交通工具",
+    "words": [
+      { "chinese": "汽车", "english": "car", "englishDistractors": ["bus", "truck", "taxi"], "chineseDistractors": ["公交车", "卡车", "出租车"] },
+      { "chinese": "公交车", "english": "bus", "englishDistractors": ["car", "train", "subway"], "chineseDistractors": ["汽车", "火车", "地铁"] },
+      { "chinese": "火车", "english": "train", "englishDistractors": ["bus", "subway", "plane"], "chineseDistractors": ["公交车", "地铁", "飞机"] },
+      { "chinese": "飞机", "english": "plane", "englishDistractors": ["train", "ship", "helicopter"], "chineseDistractors": ["火车", "轮船", "直升机"] },
+      { "chinese": "轮船", "english": "ship", "englishDistractors": ["boat", "plane", "ferry"], "chineseDistractors": ["小船", "飞机", "渡船"] },
+      { "chinese": "自行车", "english": "bike", "englishDistractors": ["bicycle", "car", "motorcycle"], "chineseDistractors": ["自行车", "汽车", "摩托车"] }
+    ]
+  },
+  {
+    "category": "数字进阶",
+    "words": [
+      { "chinese": "十一", "english": "eleven", "englishDistractors": ["twelve", "ten", "twenty"], "chineseDistractors": ["十二", "十", "二十"] },
+      { "chinese": "十二", "english": "twelve", "englishDistractors": ["eleven", "twenty", "thirteen"], "chineseDistractors": ["十一", "二十", "十三"] },
+      { "chinese": "十三", "english": "thirteen", "englishDistractors": ["twelve", "fourteen", "thirty"], "chineseDistractors": ["十二", "十四", "三十"] },
+      { "chinese": "十五", "english": "fifteen", "englishDistractors": ["fourteen", "sixteen", "fifty"], "chineseDistractors": ["十四", "十六", "五十"] },
+      { "chinese": "二十", "english": "twenty", "englishDistractors": ["twelve", "thirty", "twenty-one"], "chineseDistractors": ["十二", "三十", "二十一"] }
+    ]
+  },
+  {
+    "category": "自然天气",
+    "words": [
+      { "chinese": "太阳", "english": "sun", "englishDistractors": ["moon", "star", "sky"], "chineseDistractors": ["月亮", "星星", "天空"] },
+      { "chinese": "月亮", "english": "moon", "englishDistractors": ["sun", "star", "planet"], "chineseDistractors": ["太阳", "星星", "行星"] },
+      { "chinese": "星星", "english": "star", "englishDistractors": ["moon", "sun", "planet"], "chineseDistractors": ["月亮", "太阳", "行星"] },
+      { "chinese": "雨", "english": "rain", "englishDistractors": ["snow", "wind", "cloud"], "chineseDistractors": ["雪", "风", "云"] },
+      { "chinese": "雪", "english": "snow", "englishDistractors": ["rain", "ice", "cold"], "chineseDistractors": ["雨", "冰", "寒冷"] },
+      { "chinese": "风", "english": "wind", "englishDistractors": ["rain", "air", "storm"], "chineseDistractors": ["雨", "空气", "暴风雨"] }
+    ]
+  },
+  {
+    "category": "食物进阶",
+    "words": [
+      { "chinese": "鸡肉", "english": "chicken", "englishDistractors": ["beef", "pork", "fish"], "chineseDistractors": ["牛肉", "猪肉", "鱼肉"] },
+      { "chinese": "鱼", "english": "fish", "englishDistractors": ["meat", "chicken", "seafood"], "chineseDistractors": ["肉", "鸡肉", "海鲜"] },
+      { "chinese": "果汁", "english": "juice", "englishDistractors": ["water", "milk", "tea"], "chineseDistractors": ["水", "牛奶", "茶"] },
+      { "chinese": "茶", "english": "tea", "englishDistractors": ["coffee", "juice", "milk"], "chineseDistractors": ["咖啡", "果汁", "牛奶"] }
+    ]
+  },
+  {
+    "category": "学校科目进阶",
+    "words": [
+      { "chinese": "科学", "english": "science", "englishDistractors": ["math", "history", "biology"], "chineseDistractors": ["数学", "历史", "生物"] },
+      { "chinese": "历史", "english": "history", "englishDistractors": ["science", "geography", "culture"], "chineseDistractors": ["科学", "地理", "文化"] },
+      { "chinese": "地理", "english": "geography", "englishDistractors": ["history", "science", "map"], "chineseDistractors": ["历史", "科学", "地图"] }
+    ]
+  },
+  {
+    "category": "节日",
+    "words": [
+      { "chinese": "春节", "english": "Spring Festival", "englishDistractors": ["Christmas", "Thanksgiving", "Halloween"], "chineseDistractors": ["圣诞节", "感恩节", "万圣节"] },
+      { "chinese": "圣诞节", "english": "Christmas", "englishDistractors": ["Spring Festival", "Thanksgiving", "Easter"], "chineseDistractors": ["春节", "感恩节", "复活节"] }
+    ]
+  },
+  {
+    "category": "国家与城市",
+    "words": [
+      { "chinese": "中国", "english": "China", "englishDistractors": ["Japan", "Korea", "America"], "chineseDistractors": ["日本", "韩国", "美国"] },
+      { "chinese": "北京", "english": "Beijing", "englishDistractors": ["Shanghai", "Guangzhou", "Shenzhen"], "chineseDistractors": ["上海", "广州", "深圳"] }
+    ]
+  },
+  {
+    "category": "动物进阶",
+    "words": [
+      { "chinese": "狮子", "english": "lion", "englishDistractors": ["tiger", "elephant", "bear"], "chineseDistractors": ["老虎", "大象", "熊"] },
+      { "chinese": "大象", "english": "elephant", "englishDistractors": ["lion", "giraffe", "tiger"], "chineseDistractors": ["狮子", "长颈鹿", "老虎"] }
+    ]
+  }
+]

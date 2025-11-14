@@ -1,0 +1,101 @@
+[
+  {
+    "category": "学校与教育",
+    "words": [
+      { "chinese": "教室", "english": "classroom", "englishDistractors": ["classroom", "lab", "office"], "chineseDistractors": ["教室", "实验室", "办公室"] },
+      { "chinese": "学科", "english": "subject", "englishDistractors": ["course", "lesson", "class"], "chineseDistractors": ["课程", "课", "班级"] },
+      { "chinese": "学生", "english": "student", "englishDistractors": ["pupil", "learner", "scholar"], "chineseDistractors": ["小学生", "学习者", "学者"] },
+      { "chinese": "老师", "english": "teacher", "englishDistractors": ["instructor", "professor", "tutor"], "chineseDistractors": ["教员", "教授", "家教"] },
+      { "chinese": "图书馆", "english": "library", "englishDistractors": ["bookstore", "bookcase", "reading room"], "chineseDistractors": ["书店", "书柜", "阅读室"] },
+      { "chinese": "运动场", "english": "playground", "englishDistractors": ["park", "field", "court"], "chineseDistractors": ["公园", "田地", "球场"] }
+    ]
+  },
+  {
+    "category": "日常活动",
+    "words": [
+      { "chinese": "早晨", "english": "morning", "englishDistractors": ["dawn", "daybreak", "sunrise"], "chineseDistractors": ["黎明", "破晓", "日出"] },
+      { "chinese": "上午", "english": "forenoon", "englishDistractors": ["morning", "midday", "noon"], "chineseDistractors": ["早晨", "中午", "正午"] },
+      { "chinese": "下午", "english": "afternoon", "englishDistractors": ["evening", "dusk", "night"], "chineseDistractors": ["傍晚", "黄昏", "夜晚"] },
+      { "chinese": "晚上", "english": "evening", "englishDistractors": ["night", "dusk", "sunset"], "chineseDistractors": ["夜晚", "黄昏", "日落"] },
+      { "chinese": "早餐", "english": "breakfast", "englishDistractors": ["lunch", "dinner", "supper"], "chineseDistractors": ["午餐", "晚餐", "夜宵"] },
+      { "chinese": "午餐", "english": "lunch", "englishDistractors": ["breakfast", "dinner", "snack"], "chineseDistractors": ["早餐", "晚餐", "小吃"] }
+    ]
+  },
+  {
+    "category": "身体部位",
+    "words": [
+      { "chinese": "头", "english": "head", "englishDistractors": ["hair", "face", "skull"], "chineseDistractors": ["头发", "脸", "头骨"] },
+      { "chinese": "脸", "english": "face", "englishDistractors": ["head", "cheek", "forehead"], "chineseDistractors": ["头", "脸颊", "前额"] },
+      { "chinese": "眼睛", "english": "eye", "englishDistractors": ["eyes", "eyelid", "pupil"], "chineseDistractors": ["眼睛", "眼皮", "瞳孔"] },
+      { "chinese": "鼻子", "english": "nose", "englishDistractors": ["nostril", "bridge", "tip"], "chineseDistractors": ["鼻孔", "鼻梁", "鼻尖"] },
+      { "chinese": "嘴", "english": "mouth", "englishDistractors": ["lips", "tongue", "teeth"], "chineseDistractors": ["嘴唇", "舌头", "牙齿"] },
+      { "chinese": "耳朵", "english": "ear", "englishDistractors": ["ears", "lobe", "drum"], "chineseDistractors": ["耳朵", "耳垂", "鼓膜"] },
+      { "chinese": "手", "english": "hand", "englishDistractors": ["hands", "finger", "palm"], "chineseDistractors": ["手", "手指", "手掌"] },
+      { "chinese": "脚", "english": "foot", "englishDistractors": ["feet", "toe", "heel"], "chineseDistractors": ["脚", "脚趾", "脚跟"] }
+    ]
+  },
+  {
+    "category": "衣服与饰品",
+    "words": [
+      { "chinese": "衣服", "english": "clothes", "englishDistractors": ["dress", "costume", "outfit"], "chineseDistractors": ["连衣裙", "戏装", "装扮"] },
+      { "chinese": "衬衫", "english": "shirt", "englishDistractors": ["blouse", "vest", "sweater"], "chineseDistractors": ["女衬衫", "背心", "毛衣"] },
+      { "chinese": "裤子", "english": "trousers", "englishDistractors": ["shorts", "jeans", "pants"], "chineseDistractors": ["短裤", "牛仔裤", "裤子"] },
+      { "chinese": "裙子", "english": "skirt", "englishDistractors": ["dress", "gown", "tunic"], "chineseDistractors": ["连衣裙", "礼服", "束腰外衣"] },
+      { "chinese": "鞋", "english": "shoe", "englishDistractors": ["boot", "sandal", "slipper"], "chineseDistractors": ["靴子", "凉鞋", "拖鞋"] },
+      { "chinese": "帽子", "english": "hat", "englishDistractors": ["cap", "hood", "crown"], "chineseDistractors": ["便帽", "兜帽", "王冠"] },
+      { "chinese": "围巾", "english": "scarf", "englishDistractors": ["shawl", "wrap", "stole"], "chineseDistractors": ["披肩", "包装", "绶带"] }
+    ]
+  },
+  {
+    "category": "食物",
+    "words": [
+      { "chinese": "米", "english": "rice", "englishDistractors": ["grain", "cereal", "wheat"], "chineseDistractors": ["谷物", "麦片", "小麦"] },
+      { "chinese": "面包", "english": "bread", "englishDistractors": ["toast", "cake", "bun"], "chineseDistractors": ["吐司", "蛋糕", "小圆面包"] },
+      { "chinese": "肉", "english": "meat", "englishDistractors": ["beef", "pork", "chicken"], "chineseDistractors": ["牛肉", "猪肉", "鸡肉"] },
+      { "chinese": "鱼", "english": "fish", "englishDistractors": ["shrimp", "crab", "oyster"], "chineseDistractors": ["虾", "螃蟹", "牡蛎"] },
+      { "chinese": "鸡蛋", "english": "egg", "englishDistractors": ["yolk", "white", "shell"], "chineseDistractors": ["蛋黄", "蛋白", "蛋壳"] },
+      { "chinese": "蔬菜", "english": "vegetable", "englishDistractors": ["herb", "plant", "root"], "chineseDistractors": ["香草", "植物", "根"] },
+      { "chinese": "水果", "english": "fruit", "englishDistractors": ["berry", "melon", "citrus"], "chineseDistractors": ["浆果", "瓜", "柑橘"] },
+      { "chinese": "牛奶", "english": "milk", "englishDistractors": ["cream", "yogurt", "cheese"], "chineseDistractors": ["奶油", "酸奶", "奶酪"] }
+    ]
+  },
+  {
+    "category": "运动与爱好",
+    "words": [
+      { "chinese": "足球", "english": "football", "englishDistractors": ["soccer", "rugby", "American football"], "chineseDistractors": ["足球", "橄榄球", "美式橄榄球"] },
+      { "chinese": "篮球", "english": "basketball", "englishDistractors": ["baseball", "volleyball", "handball"], "chineseDistractors": ["棒球", "排球", "手球"] },
+      { "chinese": "网球", "english": "tennis", "englishDistractors": ["badminton", "ping-pong", "squash"], "chineseDistractors": ["羽毛球", "乒乓球", "壁球"] },
+      { "chinese": "排球", "english": "volleyball", "englishDistractors": ["basketball", "handball", "football"], "chineseDistractors": ["篮球", "手球", "足球"] },
+      { "chinese": "游泳", "english": "swimming", "englishDistractors": ["diving", "surfing", "rowing"], "chineseDistractors": ["跳水", "冲浪", "划船"] },
+      { "chinese": "唱歌", "english": "sing", "englishDistractors": ["dance", "play", "perform"], "chineseDistractors": ["跳舞", "演奏", "表演"] },
+      { "chinese": "跳舞", "english": "dance", "englishDistractors": ["sing", "jump", "swing"], "chineseDistractors": ["唱歌", "跳跃", "摇摆"] },
+      { "chinese": "画画", "english": "draw", "englishDistractors": ["paint", "sketch", "doodle"], "chineseDistractors": ["绘画", "素描", "涂鸦"] }
+    ]
+  },
+  {
+    "category": "家庭与家务",
+    "words": [
+      { "chinese": "父亲", "english": "father", "englishDistractors": ["dad", "papa", "parent"], "chineseDistractors": ["爸爸", "爹爹", "父母"] },
+      { "chinese": "母亲", "english": "mother", "englishDistractors": ["mom", "mama", "parent"], "chineseDistractors": ["妈妈", "娘", "父母"] },
+      { "chinese": "哥哥", "english": "brother", "englishDistractors": ["elder brother", "younger brother", "sibling"], "chineseDistractors": ["哥哥", "弟弟", "兄妹"] },
+      { "chinese": "妹妹", "english": "sister", "englishDistractors": ["elder sister", "younger sister", "sibling"], "chineseDistractors": ["姐姐", "妹妹", "兄妹"] },
+      { "chinese": "爷爷", "english": "grandfather", "englishDistractors": ["grandpa", "grandma", "ancestor"], "chineseDistractors": ["爷爷", "奶奶", "祖先"] },
+      { "chinese": "奶奶", "english": "grandmother", "englishDistractors": ["grandma", "grandpa", "ancestor"], "chineseDistractors": ["奶奶", "爷爷", "祖先"] },
+      { "chinese": "房间", "english": "room", "englishDistractors": ["bedroom", "kitchen", "bathroom"], "chineseDistractors": ["卧室", "厨房", "浴室"] },
+      { "chinese": "厨房", "english": "kitchen", "englishDistractors": ["dining room", "pantry", "canteen"], "chineseDistractors": ["餐厅", "食品储藏室", "食堂"] },
+      { "chinese": "卧室", "english": "bedroom", "englishDistractors": ["room", "living room", "study"], "chineseDistractors": ["房间", "起居室", "书房"] },
+      { "chinese": "浴室", "english": "bathroom", "englishDistractors": ["restroom", "toilet", "washroom"], "chineseDistractors": ["卫生间", "厕所", "洗手间"] }
+    ]
+  },
+  {
+    "category": "交通运输",
+    "words": [
+      { "chinese": "汽车", "english": "car", "englishDistractors": ["automobile", "vehicle", "vehicle"], "chineseDistractors": ["汽车", "机动车", "车辆"] },
+      { "chinese": "自行车", "english": "bicycle", "englishDistractors": ["bike", "cycle", "motorcycle"], "chineseDistractors": ["自行车", "摩托车", "机动车"] },
+      { "chinese": "公共汽车", "english": "bus", "englishDistractors": ["coach", "minibus", "shuttle"], "chineseDistractors": ["客车", "小型巴士", "接驳车"] },
+      { "chinese": "火车", "english": "train", "englishDistractors": ["locomotive", "railway", "track"], "chineseDistractors": ["机车", "铁路", "轨道"] },
+      { "chinese": "飞机", "english": "airplane", "englishDistractors": ["aircraft", "plane", "jet"], "chineseDistractors": ["飞行器", "飞机", "喷气飞机"] },
+      { "chinese": "船", "english": "ship", "englishDistractors": ["boat", "vessel", "ferry"], "chineseDistractors": ["船", "船只", "渡轮"] }
+    ]
+  }
+]
