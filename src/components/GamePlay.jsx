@@ -60,6 +60,25 @@ function GamePlay({ scope, level, onGameOver }) {
     };
   }, []);
 
+  // 监听设置变化
+  useEffect(() => {
+    const handleStorageChange = (e) => {
+      if (e.key === 'gameSettings') {
+        try {
+          const settings = JSON.parse(e.newValue);
+          setMoleStyle(settings.moleStyle || 'default');
+        } catch (error) {
+          console.error('Failed to parse settings:', error);
+        }
+      }
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+    };
+  }, []);
+
   // 倒计时
   useEffect(() => {
     if (timeLeft <= 0) {
@@ -190,13 +209,6 @@ function GamePlay({ scope, level, onGameOver }) {
     });
     setShowResultCard(true);
     setIsTimerPaused(true);
-
-    // 3秒后关闭卡片并继续游戏
-    setTimeout(() => {
-      setShowResultCard(false);
-      setIsTimerPaused(false);
-      startNewRound();
-    }, 3000);
   };
 
   // 切换静音（只关闭背景音乐）
@@ -283,6 +295,7 @@ function GamePlay({ scope, level, onGameOver }) {
         onClose={() => {
           setShowResultCard(false);
           setIsTimerPaused(false);
+          startNewRound(); // 立即开始下一轮
         }}
       />
 

@@ -3,6 +3,7 @@ import soundManager from '../utils/soundManager';
 import learningProgressManager from '../utils/learningProgressManager';
 import wrongWordsManager from '../utils/wrongWordsManager';
 import { getAvailableScopes } from '../vocabularyData';
+import { getMoleImage } from '../utils/imageLoader';
 import './Settings.css';
 
 function Settings({ onBack }) {
@@ -299,7 +300,14 @@ function Settings({ onBack }) {
                   className={`mole-style-btn ${settings.moleStyle === style.id ? 'active' : ''}`}
                   onClick={() => handleMoleStyleChange(style.id)}
                 >
-                  <span className="style-emoji">{style.emoji}</span>
+                  <div className="mole-preview">
+                    <img 
+                      src={getMoleImage(style.id)} 
+                      alt={style.name} 
+                      className="mole-preview-img"
+                    />
+                  </div>
+                  {/* <span className="style-emoji">{style.emoji}</span> */}
                   <span className="style-name">{style.name}</span>
                 </button>
               ))}

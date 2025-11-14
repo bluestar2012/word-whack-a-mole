@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import soundManager from '../utils/soundManager';
+import { getMoleImage } from '../utils/imageLoader';
 import './Mole.css';
 
 function Mole({ word, onClick, moleStyle = 'default' }) {
@@ -13,28 +14,8 @@ function Mole({ word, onClick, moleStyle = 'default' }) {
     setTimeout(() => setIsVisible(true), 100);
   }, [word]);
 
-  // 根据样式获取颜色
-  const getMoleColors = () => {
-    switch (moleStyle) {
-      case 'cute':
-        return {
-          gradient: 'linear-gradient(135deg, #FFB6C1 0%, #FFC0CB 50%, #FFB6C1 100%)',
-          border: '#FF69B4'
-        };
-      case 'cool':
-        return {
-          gradient: 'linear-gradient(135deg, #4A90E2 0%, #5FA8D3 50%, #4A90E2 100%)',
-          border: '#2E5C8A'
-        };
-      default:
-        return {
-          gradient: 'linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #8B4513 100%)',
-          border: '#654321'
-        };
-    }
-  };
-
-  const colors = getMoleColors();
+  // 获取地鼠图片
+  const moleImage = getMoleImage(moleStyle);
 
   const handleClick = () => {
     if (isClicked) return; // 防止重复点击
@@ -57,14 +38,11 @@ function Mole({ word, onClick, moleStyle = 'default' }) {
       <div className="mole-body">
         {/* 头部 */}
         <div className="mole-head">
-          <div className="mole-face" style={{ background: colors.gradient, borderColor: colors.border }}>
-            <div className="mole-eyes">
-              <div className="eye left"></div>
-              <div className="eye right"></div>
-            </div>
-            <div className="mole-nose"></div>
-            <div className="mole-mouth"></div>
-          </div>
+          <img 
+            src={moleImage} 
+            alt="地鼠" 
+            className="mole-image"
+          />
         </div>
       </div>
     </div>

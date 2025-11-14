@@ -237,18 +237,6 @@ function ExtremeChallenge({ onBack }) {
     });
     setShowResultCard(true);
     setIsTimerPaused(true);
-
-    // 3秒后关闭卡片并继续游戏
-    setTimeout(() => {
-      setShowResultCard(false);
-      setIsTimerPaused(false);
-      const updatedWords = wrongWordsManager.getAllWrongWords();
-      if (updatedWords.length > 0) {
-        startNewRound(updatedWords);
-      } else {
-        setIsGameOver(true);
-      }
-    }, 3000);
   };
 
   // 游戏结束
@@ -425,9 +413,8 @@ function ExtremeChallenge({ onBack }) {
           <div key={mole.id} className="mole-hole">
             <Mole
               word={mole.word}
-              isVisible={true}
               onClick={() => handleMoleClick(mole)}
-              style={moleStyle}
+              moleStyle={moleStyle}
             />
           </div>
         ))}
@@ -440,6 +427,12 @@ function ExtremeChallenge({ onBack }) {
         onClose={() => {
           setShowResultCard(false);
           setIsTimerPaused(false);
+          const updatedWords = wrongWordsManager.getAllWrongWords();
+          if (updatedWords.length > 0) {
+            startNewRound(updatedWords);
+          } else {
+            setIsGameOver(true);
+          }
         }}
       />
 
