@@ -72,7 +72,7 @@ function ResultCard({ mole, onClose, isVisible = false }) {
             </div>
             <div className="word-chinese">
               <span className="detail-label">含义：</span>
-              <span className="detail-value">{wordData.chinese}</span>
+              <span className="detail-value">{wordData.chineseDesc?wordData.chineseDesc:wordData.chinese}</span>
             </div>
           </div>
         )}
